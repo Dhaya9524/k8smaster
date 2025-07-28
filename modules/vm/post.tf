@@ -9,7 +9,6 @@ resource "null_resource" "remote_command" {
             type        = "ssh"
             host        = var.ip_address
             user        = var.ciuser
-            password    = var.cipassword
             timeout     = "5m"
             agent       = false
         }
