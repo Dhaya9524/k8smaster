@@ -7,7 +7,7 @@ resource "null_resource" "remote_command" {
         ]
         connection {
             type        = "ssh"
-            host        = proxmox_vm_qemu.this.ip_address
+            host        = proxmox_vm_qemu.var.ip_address
             user        = var.ciuser
             password    = var.cipassword
             timeout     = "5m"
